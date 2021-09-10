@@ -3,13 +3,13 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
 	font-family: 'Poppins', sans-serif;
 	display: grid;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	font-size: 16px;
 }
 
 img {
@@ -31,6 +31,12 @@ img {
 	&__img {
 		width: 40%;
 		padding: 10px;
+	}
+	&__img--light {
+		display: inline;
+	}
+	&__img--dark {
+		display: none;
 	}
 	&__content {
 		width: 60%;
@@ -61,9 +67,9 @@ img {
 		border-radius: 0.4em;
 		padding: 10px;
 		font-weight: 500;
+		font-size: 1em;
 		color: rgb(251, 251, 251);
 		font-family: 'Poppins', sans-serif;
-		font-size: 1em;
 	}
 }
 
@@ -80,8 +86,15 @@ img {
 		&__input {
 			width: 100%;
 		}
+		&__img--light {
+			display: none;
+		}
+		&__img--dark {
+			display: inline;
+		}
 
 		&__btn {
+			background-color: #90caf9;
 			width: 100%;
 		}
 	}
