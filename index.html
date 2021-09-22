@@ -4,46 +4,68 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+
+		<!-- Poppins Font -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+
+		<!-- Normalize -->
 		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
 			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+			integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
 		/>
-		<link rel="stylesheet" href="styles.css" />
-		<title>Document</title>
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="css/styles.css" />
+
+		<title>Light to Dark Responsive Newsletter</title>
 	</head>
+
 	<body>
-		<!-- <a href="https://storyset.com/internet">Internet illustrations by Storyset</a> -->
+		<!-- 
+			Design: 
+			https://www.instagram.com/p/CTmggO_FvTC/?utm_source=ig_web_copy_link
+
+			Images:
+			https://storyset.com/internet
+
+			Github repository: 
+			https://github.com/Javieer57/newsletter-card
+		-->
+
+		<button class="btn-toggle">Toggle Dark Mode</button>
 
 		<div class="newsl">
 			<div class="newsl__img">
-				<img
-					class="newsl__img--light"
-					src="/img/emails-amico-light.png"
-					alt=""
-				/>
-				<img
-					class="newsl__img--dark"
-					src="/img/emails-amico-dark.png"
-					alt=""
-				/>
+				<img class="newsl__img--light" src="https://raw.githubusercontent.com/Javieer57/newsletter-card/main/img/emails-amico-light.png" alt="" />
+				<img class="newsl__img--dark" src="https://raw.githubusercontent.com/Javieer57/newsletter-card/main/img/emails-amico-dark.png" alt="" />
 			</div>
+
 			<div class="newsl__content">
 				<h2 class="newsl__title">Subscribe to our newsletter!</h2>
-				<div class="newsl__text">
-					We'll send you the best of our blog just once a month. We
-					promise.
-				</div>
-				<input
-					class="newsl__input"
-					type="email"
-					name=""
-					id=""
-					placeholder="Enter e-mail"
-				/>
-				<input class="newsl__btn" type="button" value="Suscribe" />
+				<p class="newsl__text">We'll send you the best of our blog just once a month. We promise.</p>
+
+				<form action="">
+					<input class="newsl__input" type="email" name="" id="" placeholder="Enter e-mail" />
+					<input class="newsl__btn" type="button" value="Suscribe" />
+				</form>
 			</div>
 		</div>
+
+		<script>
+			const btn = document.querySelector(".btn-toggle");
+
+			// Add dark theme class on click
+			btn.addEventListener("click", function () {
+				document.body.classList.toggle("dark-theme");
+			});
+		</script>
 	</body>
 </html>

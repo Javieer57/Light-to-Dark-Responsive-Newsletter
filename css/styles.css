@@ -4,26 +4,64 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
 img {
   width: 100%;
   vertical-align: top;
 }
 
+body {
+  --text-color: #222;
+  --secondary-color: #ff0037;
+  --bkg-color: #f2f2f2;
+}
+
+body.dark-theme {
+  --text-color: #eee;
+  --secondary-color: #90caf9;
+  --bkg-color: #121212;
+}
+
+body.dark-theme .newsl__img--light {
+  display: none;
+}
+body.dark-theme .newsl__img--dark {
+  display: inline;
+}
+
+body {
+  padding: 80px 0;
+  background-color: var(--bkg-color);
+  color: var(--text-color);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.btn-toggle {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  width: 80%;
+  max-width: 300px;
+  margin: auto;
+  border: none;
+  border-radius: 0.4em;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 1em;
+  color: #fbfbfb;
+  font-family: "Poppins", sans-serif;
+}
+
 .newsl {
+  margin: 40px auto;
+  text-align: left;
   width: 80vw;
   max-width: 850px;
   height: auto;
   padding: 10px;
   border-radius: 1.5em;
-  border: 2px solid black;
+  border: 2px solid var(--text-color);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -32,15 +70,15 @@ img {
   width: 40%;
   padding: 10px;
 }
+.newsl__content {
+  width: 60%;
+  padding: 10px;
+}
 .newsl__img--light {
   display: inline;
 }
 .newsl__img--dark {
   display: none;
-}
-.newsl__content {
-  width: 60%;
-  padding: 10px;
 }
 .newsl__title {
   font-size: 1.5em;
@@ -62,7 +100,7 @@ img {
 }
 .newsl__btn {
   width: 80%;
-  background-color: #ff0037;
+  background-color: var(--secondary-color);
   border: none;
   border-radius: 0.4em;
   padding: 10px;
@@ -73,23 +111,7 @@ img {
 }
 
 @media screen and (max-width: 600px) {
-  .newsl__img {
-    width: 100%;
-  }
-  .newsl__content {
-    width: 100%;
-  }
-  .newsl__input {
-    width: 100%;
-  }
-  .newsl__img--light {
-    display: none;
-  }
-  .newsl__img--dark {
-    display: inline;
-  }
-  .newsl__btn {
-    background-color: #90caf9;
+  .newsl__img, .newsl__content, .newsl__input, .newsl__btn {
     width: 100%;
   }
 }
