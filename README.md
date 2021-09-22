@@ -4,7 +4,7 @@ A newsletter snippet, part of the light to dark codepen challenge. Uses Javascri
 
 The CSS methodology that I used is BEM and implemented with SASS.
 
-You can see the result on [codepen](https://codepen.io/Javieer57/pen/GREmKrm).
+You can see the result on [codepen](https://codepen.io/Javieer57/full/GREmKrm).
 
 ## Screenshot
 
