@@ -41,4 +41,4 @@ The images came from the [Storyset](https://storyset.com/internet) page.
 -   Frontend Mentor - @Javieer57
 -   Github - @Javieer57
 -   Instagram - @javieer57
--   Web - [javieereufracio.com](javieereufracio.com)
+-   Web - [http://javieereufracio.com](javieereufracio.com)
